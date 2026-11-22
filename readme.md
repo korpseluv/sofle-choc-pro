@@ -1,9 +1,9 @@
 # Sofle Choc Pro
 
-![sofle_choc_pro](https://i.imgur.com/q9A2HMe.jpeg)
+![sofle_choc_pro](https://raw.githubusercontent.com/Keebart/picture-cdn/refs/heads/main/sofle/main.webp)
 
-A complete remake of the Sofle Choc Keyboard by Josef Adamčík. Featuring an onboard RP2040 with 128 MB flash
-memory and choc-spaced keys for a more compact keyboard.
+A complete remake of the Sofle Choc Keyboard by Josef Adamčík. Featuring an onboard RP2040 with 16 MB flash
+memory, choc-spaced keys for a more compact keyboard and integrated OLED displays.
 
 - Keyboard Maintainer: [Keebart](https://github.com/Keebart)
 - Hardware Supported: RP2040
@@ -12,10 +12,12 @@ memory and choc-spaced keys for a more compact keyboard.
 Make example for this keyboard (after setting up your build environment):
 
     make keebart/sofle_choc_pro:default
+    make keebart/sofle_choc_pro:vial
 
 Flashing example for this keyboard:
 
     make keebart/sofle_choc_pro:default:flash
+    make keebart/sofle_choc_pro:vial:flash
 
 See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) and the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information. Brand new to QMK? Start with our [Complete Newbs Guide](https://docs.qmk.fm/#/newbs).
 
