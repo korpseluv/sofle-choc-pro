@@ -82,3 +82,16 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
 layer_state_t layer_state_set_user(layer_state_t state) {
     return update_tri_layer_state(state, SYM, NAV, TRI);
 }
+
+#ifdef OLED_ENABLE
+oled_rotation_t oled_init_user(oled_rotation_t rotation) {
+    return OLED_ROTATION_270;  // portrait; use OLED_ROTATION_90 if it is upside down
+}
+
+bool oled_task_user(void) {
+    oled_set_cursor(0, 0);
+    oled_write_ln_P(PSTR("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"), false);
+    oled_write_ln_P(is_keyboard_left() ? PSTR("LEFT") : PSTR("RIGHT"), false);
+    return false;
+}
+#endif
